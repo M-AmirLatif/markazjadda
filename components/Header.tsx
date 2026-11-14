@@ -126,23 +126,23 @@ export const Header: React.FC<HeaderProps> = ({ locale, dict }) => {
 
           {/* 4. Tablet & Mobile Controls (< 1280px) */}
           <div className="flex items-center gap-1.5 sm:gap-2 xl:hidden shrink-0">
-            {/* Compact Single-button Language Switcher on mobile */}
+            {/* Compact Single-button Language Switcher on mobile (40px height) */}
             <LanguageSwitcher currentLocale={locale} variant="compact" />
 
-            {/* Quick Direct Call Button */}
+            {/* Quick Direct Call Button (40px) */}
             <a
               href={`tel:${siteConfig.contact.phoneRaw}`}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-shop-gold flex items-center justify-center active:scale-95 transition-all"
+              className="w-10 h-10 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-shop-gold flex items-center justify-center active:scale-95 transition-all"
               aria-label="Call Markaz Jadda"
             >
               <Phone className="w-4 h-4" />
             </a>
 
-            {/* Hamburger Menu Button */}
+            {/* Hamburger Menu Button (40px) */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-white hover:text-shop-gold flex items-center justify-center active:scale-95 transition-all focus:outline-none"
+              className="w-10 h-10 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-white hover:text-shop-gold flex items-center justify-center active:scale-95 transition-all focus:outline-none"
               aria-label="Toggle Menu"
             >
               <Menu className="w-5 h-5" />
@@ -154,13 +154,13 @@ export const Header: React.FC<HeaderProps> = ({ locale, dict }) => {
       {/* 5. Full Mobile & Tablet Drawer Modal (< 1280px, Solid Opaque #0B0D12, Zero Bleed-Through, z-50) */}
       {mobileMenuOpen && (
         <div className="xl:hidden fixed inset-0 z-50 bg-[#0B0D12] flex flex-col justify-between overflow-y-auto animate-in fade-in duration-200">
-          {/* Drawer Top Header Bar */}
-          <div className="h-18 sm:h-20 px-4 sm:px-6 flex items-center justify-between border-b border-white/[0.08] bg-[#0B0D12] shrink-0">
+          {/* Drawer Top Header Bar (Exact match to main header: 80px h-20, identical padding, zero shift) */}
+          <div className="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between border-b border-white/[0.08] bg-[#0B0D12] shrink-0">
             <Logo locale={locale} />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-10 h-10 rounded-xl bg-white/[0.06] hover:bg-white/10 border border-white/10 text-white hover:text-shop-gold flex items-center justify-center active:scale-95 transition-all"
+              className="w-10 h-10 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-white hover:text-shop-gold flex items-center justify-center active:scale-95 transition-all focus:outline-none"
               aria-label="Close Menu"
             >
               <X className="w-5 h-5 text-shop-gold" />

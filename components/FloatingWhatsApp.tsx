@@ -58,8 +58,8 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ locale }) =>
         </a>
       </div>
 
-      {/* Mobile Sticky Quick Action Bar at bottom */}
-      <div className="fixed bottom-0 inset-x-0 z-40 sm:hidden bg-shop-dark/95 backdrop-blur-lg border-t border-shop-border px-3 py-2.5 flex items-center gap-2 shadow-2xl">
+      {/* Mobile Sticky Quick Action Bar at bottom with safe area insets */}
+      <div className="fixed bottom-0 inset-x-0 z-40 sm:hidden bg-shop-dark/95 backdrop-blur-lg border-t border-white/[0.08] px-4 pt-2.5 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] flex items-center gap-2.5 shadow-2xl">
         <a
           href={whatsappUrl}
           target="_blank"

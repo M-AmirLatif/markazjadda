@@ -44,7 +44,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       <button
         type="button"
         onClick={() => handleSwitch(targetLocale)}
-        className="h-9 px-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-slate-200 hover:text-shop-gold transition-all flex items-center justify-center text-xs font-bold whitespace-nowrap active:scale-95"
+        className="h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-slate-200 hover:text-shop-gold transition-all flex items-center justify-center text-xs font-bold whitespace-nowrap active:scale-95"
         aria-label={targetLocale === "ar" ? "التحويل إلى اللغة العربية" : "Switch to English"}
       >
         <span className={targetLocale === "ar" ? "font-arabic" : "font-english"}>
