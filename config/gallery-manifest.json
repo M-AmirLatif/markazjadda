@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-11-14T03:47:33.283Z",
+  "images": [
+    {
+      "originalName": "3fbf6bab-98ca-4af3-ae37-502546a77195.jpg",
+      "baseName": "3fbf6bab-98ca-4af3-ae37-502546a77195",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/3fbf6bab-98ca-4af3-ae37-502546a77195.webp",
+      "src800": "/assets/images/3fbf6bab-98ca-4af3-ae37-502546a77195-800.webp",
+      "src400": "/assets/images/3fbf6bab-98ca-4af3-ae37-502546a77195-400.webp"
+    },
+    {
+      "originalName": "40bfa9c0-a5d6-44e1-87f3-ea5535803094.jpg",
+      "baseName": "40bfa9c0-a5d6-44e1-87f3-ea5535803094",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/40bfa9c0-a5d6-44e1-87f3-ea5535803094.webp",
+      "src800": "/assets/images/40bfa9c0-a5d6-44e1-87f3-ea5535803094-800.webp",
+      "src400": "/assets/images/40bfa9c0-a5d6-44e1-87f3-ea5535803094-400.webp"
+    },
+    {
+      "originalName": "6ad67255-42f1-45ff-badb-6edb019e3035.jpg",
+      "baseName": "6ad67255-42f1-45ff-badb-6edb019e3035",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035.webp",
+      "src800": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035-800.webp",
+      "src400": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035-400.webp"
+    },
+    {
+      "originalName": "e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a.jpg",
+      "baseName": "e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a.webp",
+      "src800": "/assets/images/e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a-800.webp",
+      "src400": "/assets/images/e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a-400.webp"
+    },
+    {
+      "originalName": "efb82417-e126-49d5-8a81-cfb4ad4662d2.jpg",
+      "baseName": "efb82417-e126-49d5-8a81-cfb4ad4662d2",
+      "width": 1600,
+      "height": 1200,
+      "aspect": "1.33",
+      "src": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2.webp",
+      "src800": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2-800.webp",
+      "src400": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2-400.webp"
+    },
+    {
+      "originalName": "frontimg.jpg",
+      "baseName": "frontimg",
+      "width": 960,
+      "height": 1280,
+      "aspect": "0.75",
+      "src": "/assets/images/frontimg.webp",
+      "src800": "/assets/images/frontimg-800.webp",
+      "src400": "/assets/images/frontimg-400.webp"
+    }
+  ],
+  "videos": [
+    {
+      "id": "video_1",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.20 PM.mp4",
+      "src": "/assets/videos/video_1.mp4",
+      "poster": "/assets/posters/video_1.webp",
+      "posterJpg": "/assets/posters/video_1.jpg",
+      "originalSizeMb": "4.22",
+      "optimizedSizeMb": "1.60"
+    },
+    {
+      "id": "video_2",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.21 PM (1).mp4",
+      "src": "/assets/videos/video_2.mp4",
+      "poster": "/assets/posters/video_2.webp",
+      "posterJpg": "/assets/posters/video_2.jpg",
+      "originalSizeMb": "0.80",
+      "optimizedSizeMb": "0.27"
+    },
+    {
+      "id": "video_3",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.21 PM (2).mp4",
+      "src": "/assets/videos/video_3.mp4",
+      "poster": "/assets/posters/video_3.webp",
+      "posterJpg": "/assets/posters/video_3.jpg",
+      "originalSizeMb": "2.82",
+      "optimizedSizeMb": "1.37"
+    },
+    {
+      "id": "video_4",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.21 PM (3).mp4",
+      "src": "/assets/videos/video_4.mp4",
+      "poster": "/assets/posters/video_4.webp",
+      "posterJpg": "/assets/posters/video_4.jpg",
+      "originalSizeMb": "1.75",
+      "optimizedSizeMb": "0.76"
+    },
+    {
+      "id": "video_5",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.21 PM (4).mp4",
+      "src": "/assets/videos/video_5.mp4",
+      "poster": "/assets/posters/video_5.webp",
+      "posterJpg": "/assets/posters/video_5.jpg",
+      "originalSizeMb": "6.20",
+      "optimizedSizeMb": "2.53"
+    },
+    {
+      "id": "video_6",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.21 PM.mp4",
+      "src": "/assets/videos/video_6.mp4",
+      "poster": "/assets/posters/video_6.webp",
+      "posterJpg": "/assets/posters/video_6.jpg",
+      "originalSizeMb": "1.02",
+      "optimizedSizeMb": "0.61"
+    },
+    {
+      "id": "video_7",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.22 PM (1).mp4",
+      "src": "/assets/videos/video_7.mp4",
+      "poster": "/assets/posters/video_7.webp",
+      "posterJpg": "/assets/posters/video_7.jpg",
+      "originalSizeMb": "6.59",
+      "optimizedSizeMb": "2.68"
+    },
+    {
+      "id": "video_8",
+      "originalName": "WhatsApp Video 2026-11-10 at 5.59.22 PM.mp4",
+      "src": "/assets/videos/video_8.mp4",
+      "poster": "/assets/posters/video_8.webp",
+      "posterJpg": "/assets/posters/video_8.jpg",
+      "originalSizeMb": "1.29",
+      "optimizedSizeMb": "0.56"
+    },
+    {
+      "id": "video_9",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.07.59 PM.mp4",
+      "src": "/assets/videos/video_9.mp4",
+      "poster": "/assets/posters/video_9.webp",
+      "posterJpg": "/assets/posters/video_9.jpg",
+      "originalSizeMb": "2.98",
+      "optimizedSizeMb": "1.23"
+    },
+    {
+      "id": "video_10",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.08.22 PM.mp4",
+      "src": "/assets/videos/video_10.mp4",
+      "poster": "/assets/posters/video_10.webp",
+      "posterJpg": "/assets/posters/video_10.jpg",
+      "originalSizeMb": "3.81",
+      "optimizedSizeMb": "1.97"
+    },
+    {
+      "id": "video_11",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.08.45 PM.mp4",
+      "src": "/assets/videos/video_11.mp4",
+      "poster": "/assets/posters/video_11.webp",
+      "posterJpg": "/assets/posters/video_11.jpg",
+      "originalSizeMb": "5.06",
+      "optimizedSizeMb": "2.30"
+    },
+    {
+      "id": "video_12",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.06 PM (1).mp4",
+      "src": "/assets/videos/video_12.mp4",
+      "poster": "/assets/posters/video_12.webp",
+      "posterJpg": "/assets/posters/video_12.jpg",
+      "originalSizeMb": "7.58",
+      "optimizedSizeMb": "3.44"
+    },
+    {
+      "id": "video_13",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.06 PM.mp4",
+      "src": "/assets/videos/video_13.mp4",
+      "poster": "/assets/posters/video_13.webp",
+      "posterJpg": "/assets/posters/video_13.jpg",
+      "originalSizeMb": "2.87",
+      "optimizedSizeMb": "1.37"
+    },
+    {
+      "id": "video_14",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.13 PM.mp4",
+      "src": "/assets/videos/video_14.mp4",
+      "poster": "/assets/posters/video_14.webp",
+      "posterJpg": "/assets/posters/video_14.jpg",
+      "originalSizeMb": "10.31",
+      "optimizedSizeMb": "4.91"
+    },
+    {
+      "id": "video_15",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.14 PM (1).mp4",
+      "src": "/assets/videos/video_15.mp4",
+      "poster": "/assets/posters/video_15.webp",
+      "posterJpg": "/assets/posters/video_15.jpg",
+      "originalSizeMb": "3.02",
+      "optimizedSizeMb": "1.58"
+    },
+    {
+      "id": "video_16",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.14 PM (2).mp4",
+      "src": "/assets/videos/video_16.mp4",
+      "poster": "/assets/posters/video_16.webp",
+      "posterJpg": "/assets/posters/video_16.jpg",
+      "originalSizeMb": "3.82",
+      "optimizedSizeMb": "1.59"
+    },
+    {
+      "id": "video_17",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.14 PM (3).mp4",
+      "src": "/assets/videos/video_17.mp4",
+      "poster": "/assets/posters/video_17.webp",
+      "posterJpg": "/assets/posters/video_17.jpg",
+      "originalSizeMb": "5.46",
+      "optimizedSizeMb": "2.17"
+    },
+    {
+      "id": "video_18",
+      "originalName": "WhatsApp Video 2026-11-10 at 6.09.14 PM.mp4",
+      "src": "/assets/videos/video_18.mp4",
+      "poster": "/assets/posters/video_18.webp",
+      "posterJpg": "/assets/posters/video_18.jpg",
+      "originalSizeMb": "1.41",
+      "optimizedSizeMb": "0.71"
+    }
+  ]
+}

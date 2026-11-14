@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0F1115;
+  --foreground: #F8FAFC;
+  --shop-gold: #F5B800;
+  --shop-gold-hover: #E0A700;
+}
+
+/* Base Body Styling */
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Arabic typography specific resets per brief */
+[dir="rtl"] {
+  letter-spacing: normal !important;
+  word-spacing: normal;
+  line-height: 1.75;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+  line-height: 1.4;
+  letter-spacing: normal !important;
+}
+
+/* Ensure phone numbers and numbers render LTR cleanly inside RTL */
+.phone-number,
+.ltr-number {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121419;
+}
+::-webkit-scrollbar-thumb {
+  background: #282E3A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5B800;
+}
+
+/* High contrast visible focus states for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #F5B800 !important;
+  outline-offset: 3px !important;
+}
+
+/* Respect user's prefers-reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Glossy highlight effect for automotive cards */
+.glossy-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%), #161920;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.glossy-card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.glossy-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 184, 0, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6), 0 0 15px -3px rgba(245, 184, 0, 0.15);
+}

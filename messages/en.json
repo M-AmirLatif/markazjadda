@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Our Work",
+    "about": "About Us",
+    "book": "Book Appointment",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "callNow": "Call Now",
+    "bookNow": "Book Now",
+    "sendPhotos": "Send Photos"
+  },
+  "hero": {
+    "badge": "Auto Body, Dent Repair & Oven Paint in Jeddah",
+    "title": "Restoring Your Car to Factory Standards",
+    "subtitle": "At Markaz Jadda, we provide precision dent repair, factory-grade oven-baked spray painting, and mechanical care with expert craftsmanship and transparent, competitive pricing in Jeddah.",
+    "ctaWhatsApp": "Book on WhatsApp",
+    "ctaGallery": "View Real Workshop Work",
+    "ctaCall": "Call Directly",
+    "photoQuoteBadge": "Send photos on WhatsApp to ask about your car",
+    "shopFrontBadge": "Official Markaz Jadda Workshop Front",
+    "shopFrontServices": "Dent Repair · Oven Paint · Mechanic · Electrician",
+    "shopFrontLocation": "Prince Abdulmajeed · Near Periodic Inspection, Jeddah"
+  },
+  "common": {
+    "shopName": "Markaz Jadda",
+    "shopSubtitle": "Dent Repair · Oven Paint · Mechanical · Electrical",
+    "verified": "Google review",
+    "viewAll": "View All",
+    "learnMore": "Learn More",
+    "requestService": "Request Service via WhatsApp",
+    "askSimilar": "Inquire About Similar Work",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "location": "Location",
+    "workingHours": "Working Hours",
+    "landmarks": "Nearby Landmarks",
+    "freeQuote": "Photo Inquiry",
+    "sendDamagePhotos": "Send photos on WhatsApp to ask about your car and discuss repair options",
+    "openMap": "Open in Google Maps",
+    "playVideo": "Play Video",
+    "pauseVideo": "Pause Video",
+    "close": "Close",
+    "next": "Next",
+    "prev": "Previous",
+    "all": "All",
+    "photos": "Photos",
+    "videos": "Videos",
+    "beforeAfter": "Before & After",
+    "copyright": "All rights reserved © {year} Markaz Jadda Auto Body & Paint Center.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "noCookies": "This website is 100% static and does not use cookies, trackers, or collect personal browsing data."
+  },
+  "home": {
+    "servicesHeadline": "Comprehensive Services Under One Roof",
+    "servicesSubheadline": "From minor parking dents to full vehicle oven baking and mechanical repairs in Jeddah",
+    "whyTitle": "Why Car Owners Choose Markaz Jadda?",
+    "whySubtitle": "Combining decades of hands-on expertise, modern oven-baking equipment, and fair prices in Jeddah",
+    "features": [
+      {
+        "title": "Oven-Baked Paint Booth",
+        "desc": "Enclosed, dust-free oven baking booth ensuring durable factory-grade gloss and exact color matching."
+      },
+      {
+        "title": "Precision Dent Pulling & Chassis Alignment",
+        "desc": "Restoring body lines, doors, and fenders without metal stress or uneven panel gaps."
+      },
+      {
+        "title": "Honest, Competitive Pricing",
+        "desc": "Transparent rates significantly lower than major dealerships and large body shops without compromising quality."
+      },
+      {
+        "title": "Supervised by Experienced Craftsmen",
+        "desc": "A dedicated technical crew with proven craftsmanship praised for meticulous attention to detail."
+      }
+    ],
+    "stats": {
+      "rating": "4.1 / 5",
+      "ratingLabel": "Google Maps Rating",
+      "cars": "+3,500",
+      "carsLabel": "Vehicles Repaired & Resprayed",
+      "experience": "5+ Years",
+      "experienceLabel": "Hands-on experience across major auto repair shops",
+      "satisfaction": "100%",
+      "satisfactionLabel": "Color Match & Quality Guarantee"
+    },
+    "workTitle": "Direct From Our Jeddah Workshop",
+    "workSubtitle": "Watch authentic video clips and photos of dent repairs, oven baking booth painting, and chassis preparation",
+    "reviewsTitle": "What Our Jeddah Customers Say",
+    "reviewsSubtitle": "Real Google reviews reflecting our commitment to quality finishes and honest pricing",
+    "ctaBannerTitle": "Have Car Damage? Message Us on WhatsApp",
+    "ctaBannerSubtitle": "Take clear photos of the dent or scratches, send them to us on WhatsApp, and our technician will reply promptly to assess your vehicle.",
+    "ctaBannerBtn": "Send Photos on WhatsApp Now"
+  },
+  "servicesPage": {
+    "badge": "Specialized Markaz Jadda Services",
+    "title": "Auto Body, Paint & Mechanical Solutions",
+    "subtitle": "Discover our meticulous workflow, equipment, and dedicated steps for each specialized automotive service.",
+    "stepsTitle": "Step-by-step repair process:",
+    "whatsappPrefill": "Hello Markaz Jadda, I want to book and inquire about: {service}"
+  },
+  "galleryPage": {
+    "badge": "Authentic Work Gallery",
+    "title": "Explore Our Real Results in Photos & Videos",
+    "subtitle": "Every image and video was recorded inside Markaz Jadda's workshop on real customer cars.",
+    "filterAll": "All Work",
+    "filterVideos": "Video Clips",
+    "filterPhotos": "Shop Photos",
+    "filterDent": "Dent & Collision",
+    "filterPaint": "Oven Paint",
+    "filterChassis": "Chassis & Prep",
+    "before": "Before Repair",
+    "after": "After Prep & Paint",
+    "dragSlider": "Drag slider to compare initial damage and final prepared result"
+  },
+  "aboutPage": {
+    "badge": "About Markaz Jadda",
+    "title": "Dedicated Craftsmanship & Quality in Jeddah",
+    "subtitle": "We operate in the heart of Jeddah as a trusted destination for car owners seeking dealership-level finishes at sensible, honest prices.",
+    "storyTitle": "Markaz Jadda: Uncompromising Workmanship",
+    "storyP1": "Markaz Jadda was established to deliver genuine auto body repair, oven-baked spray painting, and mechanical maintenance. Through years of serving the Jeddah community, we have earned customer trust through honesty, punctual turnaround, and meticulous craftsmanship.",
+    "storyP2": "Whether your vehicle suffered an accident dent or paint fade from Jeddah's coastal heat and sun, our experienced technicians ensure every contour is smoothed, prepped, and painted to look factory fresh.",
+    "equipmentTitle": "Advanced Workshop Facilities & Tools",
+    "equipments": [
+      {
+        "title": "Enclosed Paint Oven Baking Booth",
+        "desc": "Sealed oven baking booth with multi-stage air filtration, downdraft ventilation, and uniform curing."
+      },
+      {
+        "title": "Hydraulic Chassis & Dent Pullers",
+        "desc": "Heavy-duty pulling towers to realign chassis and straighten unibody frames back to OEM factory tolerances."
+      },
+      {
+        "title": "Precision Wet-Sanding & Polishing Machines",
+        "desc": "Pneumatic rotary and orbital buffers for high-refinement finish without swirl marks."
+      },
+      {
+        "title": "Computerized Paint Formulation",
+        "desc": "Exact OEM color code matching to blend new paint seamlessly with existing panels."
+      }
+    ],
+    "valuesTitle": "Our Core Values",
+    "values": [
+      { "title": "Integrity & Transparency", "desc": "We walk you through required repairs honestly and recommend only necessary work." },
+      { "title": "Affordable Quality", "desc": "Premium automotive standards at honest, competitive rates accessible to everyone in Jeddah." },
+      { "title": "On-Time Handover", "desc": "We respect your schedule and ensure thorough quality checks prior to promised delivery." }
+    ]
+  },
+  "bookPage": {
+    "badge": "Book Appointment & Inquire on WhatsApp",
+    "title": "Schedule Your Visit to Markaz Jadda",
+    "subtitle": "Fill in your car details, and the system will format a clear WhatsApp message ready to send with one click.",
+    "directWhatsAppTitle": "Prefer Immediate Assistance?",
+    "directWhatsAppDesc": "Tap below to chat directly with our technician on WhatsApp right now:",
+    "directWhatsAppBtn": "Direct WhatsApp Chat (+966 50 902 5410)",
+    "formTitle": "Appointment & Vehicle Details",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "phoneLabel": "Mobile Number",
+    "phonePlaceholder": "05xxxxxxxx",
+    "carMakeLabel": "Car Make, Model & Year",
+    "carMakePlaceholder": "e.g., Camry 2022 / Tahoe 2018",
+    "serviceLabel": "Required Service",
+    "serviceSelect": "Select a service",
+    "dateLabel": "Preferred Date",
+    "messageLabel": "Damage Description / Notes",
+    "messagePlaceholder": "Describe the dent, scratch, or repair you need...",
+    "submitBtn": "Send Booking Details via WhatsApp",
+    "photoUploadNoticeTitle": "Important Note on Photos:",
+    "photoUploadNotice": "Because this site is completely static and secure, photos cannot be uploaded through this web form. After clicking the button, your WhatsApp chat will open—please attach photos of the car damage directly in WhatsApp so our technician can assess the vehicle and discuss options.",
+    "validationError": "Please fill in the required fields and enter a valid mobile number."
+  },
+  "contactPage": {
+    "badge": "Visit & Contact Us",
+    "title": "Our Location in Jeddah & Contact Details",
+    "subtitle": "We welcome you at Markaz Jadda workshop during business hours or via direct call and WhatsApp.",
+    "addressTitle": "Address & Location",
+    "phoneTitle": "Direct Contact Numbers",
+    "hoursTitle": "Working Hours",
+    "mapTitle": "Our Exact Location on Google Maps",
+    "directionsBtn": "Get Directions (Google Maps)"
+  },
+  "faqPage": {
+    "badge": "Frequently Asked Questions",
+    "title": "Everything You Need to Know",
+    "subtitle": "Clear answers regarding repair timeframes, WhatsApp photo inquiries, accepted vehicles, and workshop services."
+  },
+  "notFound": {
+    "title": "Page Not Found (404)",
+    "subtitle": "Sorry, the page you are looking for does not exist or has been moved.",
+    "backHome": "Back to Home"
+  }
+}
