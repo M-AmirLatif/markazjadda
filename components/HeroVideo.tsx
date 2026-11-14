@@ -56,8 +56,8 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ poster, src, locale }) => 
         <source src={src} type="video/mp4" />
       </video>
 
-      {/* Subtle Pause / Play Accessibility Control Button (Desktop/Tablet) */}
-      <div className="hidden sm:flex absolute bottom-6 start-6 z-20">
+      {/* Subtle Pause / Play Accessibility Control Button (Top corner to prevent card collision) */}
+      <div className="hidden sm:flex absolute top-6 end-6 z-20">
         <button
           type="button"
           onClick={togglePlay}

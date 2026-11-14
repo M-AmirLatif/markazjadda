@@ -14,7 +14,6 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ locale, dict }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname() || "";
   const router = useRouter();
@@ -40,14 +39,6 @@ export const Header: React.FC<HeaderProps> = ({ locale, dict }) => {
       router.prefetch(`/${locale}/book/`);
     } catch {}
   }, [locale, router]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Lock body scroll when mobile drawer is open
   useEffect(() => {
@@ -76,13 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, dict }) => {
 
   return (
     <>
-      <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#0B0D12]/95 backdrop-blur-xl shadow-xl shadow-black/50 border-b border-white/[0.08] h-18 sm:h-20"
-            : "bg-[#0B0D12]/80 backdrop-blur-md border-b border-white/[0.06] h-20 sm:h-22"
-        } flex items-center`}
-      >
+      <header className="sticky top-0 z-40 w-full bg-[#0B0D12] border-b border-white/[0.08] shadow-lg shadow-black/40 h-20 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between gap-4">
           {/* 1. Brand Logo */}
           <Logo locale={locale} />
