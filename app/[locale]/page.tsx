@@ -17,6 +17,8 @@ import {
   Camera,
   CheckCircle2,
   Clock,
+  Award,
+  Tag,
   ArrowRight,
   ArrowLeft,
   ChevronRight,
@@ -113,6 +115,22 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                   {isArabic ? <ArrowLeft className="w-4 h-4 text-shop-gold" /> : <ArrowRight className="w-4 h-4 text-shop-gold" />}
                 </Link>
               </div>
+
+              {/* Trust & Guarantee Highlights: Warranty, Starting Price, Experience */}
+              <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 text-xs w-full">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-shop-card/90 border border-shop-gold/30 text-shop-gold font-bold backdrop-blur-md shadow-sm">
+                  <ShieldCheck className="w-4 h-4 text-shop-gold shrink-0" />
+                  <span>{isArabic ? "ضمان سنتين على بوية الفرن" : "2-Year Oven Paint Warranty"}</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-shop-card/90 border border-shop-gold/30 text-slate-200 font-bold backdrop-blur-md shadow-sm">
+                  <Tag className="w-4 h-4 text-shop-gold shrink-0" />
+                  <span>{isArabic ? "تبدأ من 2,000 ريال (حسب حالة السيارة)" : "Starts from ~2,000 SAR (Based on Condition)"}</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-shop-card/90 border border-shop-gold/30 text-slate-200 font-bold backdrop-blur-md shadow-sm">
+                  <Award className="w-4 h-4 text-shop-gold shrink-0" />
+                  <span>{isArabic ? "خبرة 3-4 سنوات بأشهر ورش جدة" : "3–4 Yrs in Top Jeddah Shops"}</span>
+                </span>
+              </div>
             </div>
 
             {/* Column 2: Prominent Real Shop Front Image Showcase (lg:col-span-5) */}
@@ -183,7 +201,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* 2. STATS BAR (VERIFIED FACTS ONLY) */}
+      {/* 2. STATS BAR (VERIFIED FACTS: RATING, WARRANTY, STARTING PRICE, EXPERIENCE) */}
       <section className="relative z-20 mt-6 sm:-mt-10 max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 md:p-6 rounded-3xl bg-shop-card border border-shop-border shadow-2xl glossy-panel">
           {/* Stat 1: Google Rating */}
@@ -195,37 +213,40 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               </span>
             </div>
             <p className="text-xs text-shop-muted">
-              {isArabic ? "تقييم العملاء على خرائط جوجل" : "Google Maps Rating"}
+              {isArabic ? "تقييم العملاء (7 مراجعات على جوجل)" : "Google Maps (7 reviews)"}
             </p>
           </div>
 
-          {/* Stat 2: Review Count (7 Google reviews) */}
+          {/* Stat 2: 2-Year Warranty on Oven Paint */}
           <div className="text-center p-3 border-s border-white/5">
-            <span className="block text-2xl sm:text-3xl font-extrabold text-shop-gold ltr-number mb-1">
-              {siteConfig.stats.ratingCount}
-            </span>
+            <div className="flex items-center justify-center gap-1.5 text-shop-gold mb-1">
+              <ShieldCheck className="w-5 h-5" />
+              <span className="text-2xl sm:text-3xl font-extrabold text-shop-gold">
+                {isArabic ? "سنتين" : "2 Yrs"}
+              </span>
+            </div>
             <p className="text-xs text-shop-muted">
-              {isArabic ? "7 مراجعات على جوجل" : "7 Google reviews"}
+              {isArabic ? "ضمان معتمد على بوية الفرن" : "Warranty on Oven Paint"}
             </p>
           </div>
 
-          {/* Stat 3: Confirmed 5+ Years Experience across top shops */}
+          {/* Stat 3: Pricing starting from ~2,000 SAR */}
           <div className="text-center p-3 border-s border-white/5">
-            <span className="block text-2xl sm:text-3xl font-extrabold text-shop-gold ltr-number mb-1">
-              {siteConfig.stats.yearsExperience}
+            <span className="block text-xl sm:text-2xl font-extrabold text-shop-gold mb-1">
+              {isArabic ? "2,000 ريال" : "2,000 SAR"}
             </span>
             <p className="text-xs text-shop-muted">
-              {isArabic ? "سنوات خبرة في كبرى الورش" : "Years Multi-Shop Experience"}
+              {isArabic ? "تبدأ من 2,000 ر.س (حسب حالة السيارة)" : "Starts ~2,000 SAR (Condition based)"}
             </p>
           </div>
 
-          {/* Stat 4: The 4 Sign Services */}
+          {/* Stat 4: 3-4 Years Specialized Experience in famous Jeddah shops */}
           <div className="text-center p-3 border-s border-white/5">
-            <span className="block text-2xl sm:text-3xl font-extrabold text-shop-gold ltr-number mb-1">
-              4
+            <span className="block text-2xl sm:text-3xl font-extrabold text-shop-gold mb-1">
+              {isArabic ? "3-4 سنوات" : "3-4 Years"}
             </span>
             <p className="text-xs text-shop-muted">
-              {isArabic ? "خدمات معتمدة باللوحة" : "Core Workshop Services"}
+              {isArabic ? "خبرة بأشهر ورش صيانة بجدة" : "In Famous Jeddah Body Shops"}
             </p>
           </div>
         </div>
@@ -279,9 +300,25 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                     {shortDesc}
                   </p>
+
+                  {/* Pricing or Warranty highlights if available */}
+                  {((isArabic ? svc.priceNoteAr : svc.priceNoteEn) || (isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn)) && (
+                    <div className="mb-4 space-y-1.5">
+                      {(isArabic ? svc.priceNoteAr : svc.priceNoteEn) && (
+                        <div className="text-[11px] font-semibold text-shop-gold bg-shop-gold/10 px-2.5 py-1 rounded-lg border border-shop-gold/25 inline-block w-full">
+                          🏷️ {isArabic ? svc.priceNoteAr : svc.priceNoteEn}
+                        </div>
+                      )}
+                      {(isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn) && (
+                        <div className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/25 inline-block w-full">
+                          🛡️ {isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <div className="pt-4 border-t border-white/5 flex items-center justify-between">
@@ -395,7 +432,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
               href={`/${locale}/gallery/`}
               className="px-5 py-2.5 rounded-xl bg-shop-charcoal border border-shop-border hover:border-shop-gold text-xs sm:text-sm font-bold text-white transition-colors flex items-center gap-2 shrink-0"
             >
-              <span>{dict.common.viewAll} (24 {isArabic ? "عمل موثق" : "items"})</span>
+              <span>{dict.common.viewAll} ({siteConfig.gallery.length} {isArabic ? "عمل موثق" : "items"})</span>
               {isArabic ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
             </Link>
           </div>

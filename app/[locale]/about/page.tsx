@@ -44,15 +44,18 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
             {dict.aboutPage.storyP2}
           </p>
 
-          <div className="pt-2 flex flex-wrap gap-4 text-xs font-bold text-shop-gold">
+          <div className="pt-2 flex flex-wrap gap-3 text-xs font-bold text-shop-gold">
             <span className="p-3 rounded-xl bg-shop-card border border-shop-border">
-              {isArabic ? "✓ خبرة +5 سنوات في كبرى الورش" : "✓ 5+ Years Multi-Shop Experience"}
+              {isArabic ? "✓ خبرة 3-4 سنوات بأشهر ورش ومراكز صيانة جدة" : "✓ 3–4 Years in Top Jeddah Body Shops"}
+            </span>
+            <span className="p-3 rounded-xl bg-shop-card border border-shop-border text-emerald-400">
+              {isArabic ? "✓ ضمان سنتين على بوية الفرن" : "✓ 2-Year Oven Paint Warranty"}
             </span>
             <span className="p-3 rounded-xl bg-shop-card border border-shop-border">
-              {isArabic ? "✓ سمكرة يدوية وهيدروليكية" : "✓ Hydraulic Dent Straightening"}
+              {isArabic ? "✓ أسعار تبدأ من 2,000 ريال (حسب حالة السيارة)" : "✓ Pricing from ~2,000 SAR (Condition Based)"}
             </span>
             <span className="p-3 rounded-xl bg-shop-card border border-shop-border">
-              {isArabic ? "✓ كبينة بوية فرن معزولة" : "✓ Sealed Oven Baking Booth"}
+              {isArabic ? "✓ كبينة بوية فرن معزولة ومجهزة" : "✓ Sealed Oven Baking Booth"}
             </span>
           </div>
         </div>

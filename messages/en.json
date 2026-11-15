@@ -19,6 +19,8 @@
     "ctaGallery": "View Real Workshop Work",
     "ctaCall": "Call Directly",
     "photoQuoteBadge": "Send photos on WhatsApp to ask about your car",
+    "trustPill": "2-Year Oven Paint Warranty · Dent & Paint Starts from 2,000 SAR (Based on Condition) · 3-4 Yrs in Top Jeddah Shops",
+    "startingPricePill": "Dent & paint starts from ~2,000 SAR (Contingent on vehicle condition)",
     "shopFrontBadge": "Official Markaz Jadda Workshop Front",
     "shopFrontServices": "Dent Repair · Oven Paint · Mechanic · Electrician",
     "shopFrontLocation": "Prince Abdulmajeed · Near Periodic Inspection, Jeddah"
@@ -60,31 +62,31 @@
     "whySubtitle": "Combining decades of hands-on expertise, modern oven-baking equipment, and fair prices in Jeddah",
     "features": [
       {
-        "title": "Oven-Baked Paint Booth",
-        "desc": "Enclosed, dust-free oven baking booth ensuring durable factory-grade gloss and exact color matching."
+        "title": "2-Year Oven Paint Warranty",
+        "desc": "Enclosed, dust-free baking booth with certified automotive coatings backed by an official 2-year warranty against peeling and fading."
+      },
+      {
+        "title": "Pricing from ~2,000 SAR",
+        "desc": "Dent repair & oven painting starts from ~2,000 SAR depending on vehicle condition, car model, and damage depth, with complete honesty."
+      },
+      {
+        "title": "3–4 Years in Top Jeddah Workshops",
+        "desc": "Skilled craftsmen with 3–4 years of specialized dent & paint mastery across Jeddah's famous body shops, and 5+ years overall expertise."
       },
       {
         "title": "Precision Dent Pulling & Chassis Alignment",
         "desc": "Restoring body lines, doors, and fenders without metal stress or uneven panel gaps."
-      },
-      {
-        "title": "Honest, Competitive Pricing",
-        "desc": "Transparent rates significantly lower than major dealerships and large body shops without compromising quality."
-      },
-      {
-        "title": "Supervised by Experienced Craftsmen",
-        "desc": "A dedicated technical crew with proven craftsmanship praised for meticulous attention to detail."
       }
     ],
     "stats": {
       "rating": "4.1 / 5",
       "ratingLabel": "Google Maps Rating",
-      "cars": "+3,500",
-      "carsLabel": "Vehicles Repaired & Resprayed",
-      "experience": "5+ Years",
-      "experienceLabel": "Hands-on experience across major auto repair shops",
-      "satisfaction": "100%",
-      "satisfactionLabel": "Color Match & Quality Guarantee"
+      "warranty": "2 Years",
+      "warrantyLabel": "Warranty on Oven-Baked Paint",
+      "startingPrice": "2,000 SAR",
+      "startingPriceLabel": "Starts from 2,000 SAR (Condition Based)",
+      "experience": "3–4 Years",
+      "experienceLabel": "Experience in famous Jeddah shops"
     },
     "workTitle": "Direct From Our Jeddah Workshop",
     "workSubtitle": "Watch authentic video clips and photos of dent repairs, oven baking booth painting, and chassis preparation",

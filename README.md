@@ -211,7 +211,9 @@ All unverified claims have been removed from the public site and collected in `O
 - **Business Name:** مركز جدة / Markaz Jadda
 - **Services on Physical Sign:** سمكرة (Dent & Body Repair), بوية فرن (Oven-Baked Spray Painting), ميكانيكي (Mechanical Repair), كهربائي (Auto Electrical)
 - **Phone / WhatsApp:** `+966 50 902 5410` (wa.me/966509025410)
-- **Experience:** 5+ years of verified hands-on experience across multiple major automotive workshops
+- **Experience:** 3–4 years of specialized experience in denting & oven painting across famous auto body workshops in Jeddah (with 5+ years total automotive workshop experience)
+- **Pricing:** Denting & oven paint starts from ~2,000 SAR (exact price depends on vehicle condition, car model, and damage depth)
+- **Paint Warranty:** 2-year warranty on oven-baked paint against peeling and color fading
 - **Location:** `C7V9+P79, Prince Abdulmajeed, Jeddah 22431, Saudi Arabia`
 - **Landmarks:** Near Tamees House restaurant & Motor Vehicles Periodic Inspection (الفحص الدوري)
 - **Customer Rating:** 4.1 from 7 Google reviews

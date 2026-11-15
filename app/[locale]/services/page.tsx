@@ -1,7 +1,7 @@
 import React from "react";
 import { getDictionary, isRtl } from "@/lib/i18n";
 import { siteConfig } from "@/config/site";
-import { Wrench, PaintBucket, Sparkles, Cog, Zap, MessageCircle, CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
+import { Wrench, PaintBucket, Sparkles, Cog, Zap, MessageCircle, CheckCircle2, ArrowRight, ArrowLeft, ShieldCheck, Tag, Award } from "lucide-react";
 
 const serviceIcons: Record<string, React.ReactNode> = {
   Wrench: <Wrench className="w-8 h-8 text-shop-gold" />,
@@ -55,6 +55,66 @@ export default function ServicesPage({ params }: { params: { locale: string } })
         <p className="text-sm sm:text-base text-shop-muted leading-relaxed">
           {dict.servicesPage.subtitle}
         </p>
+      </div>
+
+      {/* Pricing, Warranty & Experience Verified Guarantee Banner */}
+      <div className="mb-20 grid grid-cols-1 md:grid-cols-3 gap-6 p-6 sm:p-8 rounded-3xl bg-shop-card border border-shop-gold/30 shadow-2xl glossy-panel">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-2xl bg-shop-gold/15 text-shop-gold flex items-center justify-center shrink-0">
+            <ShieldCheck className="w-6 h-6 text-shop-gold" />
+          </div>
+          <div>
+            <span className="text-[11px] font-bold text-shop-gold uppercase tracking-wider block mb-1">
+              {isArabic ? "ضمان معتمد" : "Official Guarantee"}
+            </span>
+            <h3 className="text-base font-bold text-white mb-1.5">
+              {isArabic ? "ضمان سنتين على بوية الفرن" : "2-Year Oven Paint Warranty"}
+            </h3>
+            <p className="text-xs text-shop-muted leading-relaxed">
+              {isArabic
+                ? "نقدم ضماناً معتمداً لمدة سنتين ضد التقشير وتغير اللون وانطفاء اللمعة لراحة بالك التامة."
+                : "Full 2-year warranty on oven-baked paint against peeling, color fading, and clear coat failure."}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 md:border-s md:border-white/10 md:ps-6">
+          <div className="w-12 h-12 rounded-2xl bg-shop-gold/15 text-shop-gold flex items-center justify-center shrink-0">
+            <Tag className="w-6 h-6 text-shop-gold" />
+          </div>
+          <div>
+            <span className="text-[11px] font-bold text-shop-gold uppercase tracking-wider block mb-1">
+              {isArabic ? "وضوح وشفافية" : "Fair Pricing"}
+            </span>
+            <h3 className="text-base font-bold text-white mb-1.5">
+              {isArabic ? "الأسعار تبدأ من 2,000 ريال" : "Starts from ~2,000 SAR"}
+            </h3>
+            <p className="text-xs text-shop-muted leading-relaxed">
+              {isArabic
+                ? "تبدأ أسعار السمكرة والبوية من 2,000 ريال، وتعتمد التكلفة الدقيقة على حالة ونظافة السيارة ونوعها وحجم وعمق الصدمة."
+                : "Denting and oven paint starts from ~2,000 SAR; exact pricing depends on vehicle condition, car model, and damage depth."}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 md:border-s md:border-white/10 md:ps-6">
+          <div className="w-12 h-12 rounded-2xl bg-shop-gold/15 text-shop-gold flex items-center justify-center shrink-0">
+            <Award className="w-6 h-6 text-shop-gold" />
+          </div>
+          <div>
+            <span className="text-[11px] font-bold text-shop-gold uppercase tracking-wider block mb-1">
+              {isArabic ? "حرفية وإتقان" : "Master Craftsmen"}
+            </span>
+            <h3 className="text-base font-bold text-white mb-1.5">
+              {isArabic ? "خبرة 3-4 سنوات بأشهر ورش جدة" : "3-4 Years in Top Jeddah Shops"}
+            </h3>
+            <p className="text-xs text-shop-muted leading-relaxed">
+              {isArabic
+                ? "فنيون متمرسون مارسوا سمكرة وبوية السيارات في أعرق ورش جدة مع أكثر من 5 سنوات خبرة شاملة."
+                : "Master technicians with 3-4 years specialized expertise in Jeddah's top workshops, backed by 5+ years overall background."}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Services List (Alternating Layout) */}
@@ -126,6 +186,30 @@ export default function ServicesPage({ params }: { params: { locale: string } })
                     ))}
                   </div>
                 </div>
+
+                {/* Badges for Pricing / Warranty / Experience if defined */}
+                {((isArabic ? svc.priceNoteAr : svc.priceNoteEn) || (isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn) || (isArabic ? svc.experienceBadgeAr : svc.experienceBadgeEn)) && (
+                  <div className="flex flex-wrap gap-2.5 pt-1">
+                    {(isArabic ? svc.priceNoteAr : svc.priceNoteEn) && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-shop-gold/15 border border-shop-gold/30 text-shop-gold text-xs font-bold">
+                        <Tag className="w-3.5 h-3.5 shrink-0" />
+                        <span>{isArabic ? svc.priceNoteAr : svc.priceNoteEn}</span>
+                      </span>
+                    )}
+                    {(isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn) && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
+                        <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+                        <span>{isArabic ? svc.warrantyBadgeAr : svc.warrantyBadgeEn}</span>
+                      </span>
+                    )}
+                    {(isArabic ? svc.experienceBadgeAr : svc.experienceBadgeEn) && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-shop-charcoal border border-white/10 text-slate-300 text-xs font-bold">
+                        <Award className="w-3.5 h-3.5 text-shop-gold shrink-0" />
+                        <span>{isArabic ? svc.experienceBadgeAr : svc.experienceBadgeEn}</span>
+                      </span>
+                    )}
+                  </div>
+                )}
 
                 {/* WhatsApp Request CTA */}
                 <div className="pt-4">

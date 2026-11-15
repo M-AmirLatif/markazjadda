@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-11-14T03:47:33.283Z",
+  "generatedAt": "2026-11-15T13:44:20.990Z",
   "images": [
+    {
+      "originalName": "03b7646b-71a4-4ced-9333-c5fece2bca91.jpg",
+      "baseName": "03b7646b-71a4-4ced-9333-c5fece2bca91",
+      "width": 1600,
+      "height": 1200,
+      "aspect": "1.33",
+      "src": "/assets/images/03b7646b-71a4-4ced-9333-c5fece2bca91.webp",
+      "src800": "/assets/images/03b7646b-71a4-4ced-9333-c5fece2bca91-800.webp",
+      "src400": "/assets/images/03b7646b-71a4-4ced-9333-c5fece2bca91-400.webp"
+    },
+    {
+      "originalName": "0c8467c6-1539-4019-bdd9-2c9488fa5269.jpg",
+      "baseName": "0c8467c6-1539-4019-bdd9-2c9488fa5269",
+      "width": 1600,
+      "height": 1200,
+      "aspect": "1.33",
+      "src": "/assets/images/0c8467c6-1539-4019-bdd9-2c9488fa5269.webp",
+      "src800": "/assets/images/0c8467c6-1539-4019-bdd9-2c9488fa5269-800.webp",
+      "src400": "/assets/images/0c8467c6-1539-4019-bdd9-2c9488fa5269-400.webp"
+    },
+    {
+      "originalName": "3f701acf-948b-4def-ba2b-2fb36996c03d.jpg",
+      "baseName": "3f701acf-948b-4def-ba2b-2fb36996c03d",
+      "width": 1600,
+      "height": 1200,
+      "aspect": "1.33",
+      "src": "/assets/images/3f701acf-948b-4def-ba2b-2fb36996c03d.webp",
+      "src800": "/assets/images/3f701acf-948b-4def-ba2b-2fb36996c03d-800.webp",
+      "src400": "/assets/images/3f701acf-948b-4def-ba2b-2fb36996c03d-400.webp"
+    },
     {
       "originalName": "3fbf6bab-98ca-4af3-ae37-502546a77195.jpg",
       "baseName": "3fbf6bab-98ca-4af3-ae37-502546a77195",
@@ -22,6 +52,16 @@
       "src400": "/assets/images/40bfa9c0-a5d6-44e1-87f3-ea5535803094-400.webp"
     },
     {
+      "originalName": "6732e1e0-8650-4635-9245-d76bbeda1997.jpg",
+      "baseName": "6732e1e0-8650-4635-9245-d76bbeda1997",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/6732e1e0-8650-4635-9245-d76bbeda1997.webp",
+      "src800": "/assets/images/6732e1e0-8650-4635-9245-d76bbeda1997-800.webp",
+      "src400": "/assets/images/6732e1e0-8650-4635-9245-d76bbeda1997-400.webp"
+    },
+    {
       "originalName": "6ad67255-42f1-45ff-badb-6edb019e3035.jpg",
       "baseName": "6ad67255-42f1-45ff-badb-6edb019e3035",
       "width": 1200,
@@ -30,6 +70,36 @@
       "src": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035.webp",
       "src800": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035-800.webp",
       "src400": "/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035-400.webp"
+    },
+    {
+      "originalName": "9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5.jpg",
+      "baseName": "9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5.webp",
+      "src800": "/assets/images/9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5-800.webp",
+      "src400": "/assets/images/9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5-400.webp"
+    },
+    {
+      "originalName": "aafb014b-597b-4058-9b2c-8bcb98c22e3b.jpg",
+      "baseName": "aafb014b-597b-4058-9b2c-8bcb98c22e3b",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/aafb014b-597b-4058-9b2c-8bcb98c22e3b.webp",
+      "src800": "/assets/images/aafb014b-597b-4058-9b2c-8bcb98c22e3b-800.webp",
+      "src400": "/assets/images/aafb014b-597b-4058-9b2c-8bcb98c22e3b-400.webp"
+    },
+    {
+      "originalName": "baa4182a-e03a-4da8-958d-4e95ec2bc6b1.jpg",
+      "baseName": "baa4182a-e03a-4da8-958d-4e95ec2bc6b1",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/baa4182a-e03a-4da8-958d-4e95ec2bc6b1.webp",
+      "src800": "/assets/images/baa4182a-e03a-4da8-958d-4e95ec2bc6b1-800.webp",
+      "src400": "/assets/images/baa4182a-e03a-4da8-958d-4e95ec2bc6b1-400.webp"
     },
     {
       "originalName": "e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a.jpg",
@@ -42,6 +112,16 @@
       "src400": "/assets/images/e5a9b2ad-2d46-4f85-8ae7-5e4260608a5a-400.webp"
     },
     {
+      "originalName": "ed5239e0-4a12-4d4e-ad00-eae927d61f6d.jpg",
+      "baseName": "ed5239e0-4a12-4d4e-ad00-eae927d61f6d",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/ed5239e0-4a12-4d4e-ad00-eae927d61f6d.webp",
+      "src800": "/assets/images/ed5239e0-4a12-4d4e-ad00-eae927d61f6d-800.webp",
+      "src400": "/assets/images/ed5239e0-4a12-4d4e-ad00-eae927d61f6d-400.webp"
+    },
+    {
       "originalName": "efb82417-e126-49d5-8a81-cfb4ad4662d2.jpg",
       "baseName": "efb82417-e126-49d5-8a81-cfb4ad4662d2",
       "width": 1600,
@@ -50,6 +130,16 @@
       "src": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2.webp",
       "src800": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2-800.webp",
       "src400": "/assets/images/efb82417-e126-49d5-8a81-cfb4ad4662d2-400.webp"
+    },
+    {
+      "originalName": "fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77.jpg",
+      "baseName": "fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77",
+      "width": 1200,
+      "height": 1600,
+      "aspect": "0.75",
+      "src": "/assets/images/fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77.webp",
+      "src800": "/assets/images/fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77-800.webp",
+      "src400": "/assets/images/fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77-400.webp"
     },
     {
       "originalName": "frontimg.jpg",
@@ -224,6 +314,24 @@
       "posterJpg": "/assets/posters/video_18.jpg",
       "originalSizeMb": "1.41",
       "optimizedSizeMb": "0.71"
+    },
+    {
+      "id": "video_19",
+      "originalName": "WhatsApp Video 2026-11-14 at 1.55.01 PM (1).mp4",
+      "src": "/assets/videos/video_19.mp4",
+      "poster": "/assets/posters/video_19.webp",
+      "posterJpg": "/assets/posters/video_19.jpg",
+      "originalSizeMb": "2.96",
+      "optimizedSizeMb": "1.08"
+    },
+    {
+      "id": "video_20",
+      "originalName": "WhatsApp Video 2026-11-14 at 1.56.04 PM.mp4",
+      "src": "/assets/videos/video_20.mp4",
+      "poster": "/assets/posters/video_20.webp",
+      "posterJpg": "/assets/posters/video_20.jpg",
+      "originalSizeMb": "2.06",
+      "optimizedSizeMb": "1.08"
     }
   ]
 }

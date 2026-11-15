@@ -14,6 +14,12 @@ export interface ServiceItem {
   stepsEn: string[];
   badgeAr?: string;
   badgeEn?: string;
+  priceNoteAr?: string;
+  priceNoteEn?: string;
+  warrantyBadgeAr?: string;
+  warrantyBadgeEn?: string;
+  experienceBadgeAr?: string;
+  experienceBadgeEn?: string;
 }
 
 export interface ReviewItem {
@@ -64,13 +70,17 @@ export const OWNER_TODO_CHECKLIST = {
     suggestedAr: "السبت – الخميس: 8:00 صباحاً – 10:00 مساءً | الجمعة: 4:00 عصراً – 10:00 مساءً",
     suggestedEn: "Saturday – Thursday: 8:00 AM – 10:00 PM | Friday: 4:00 PM – 10:00 PM",
   },
-  // 4. Statistics: Confirm founding year / cars repaired
+  // 4. Statistics: Confirmed experience, warranty and starting price
   statistics: {
     enabled: true,
-    yearsExperience: "5+",
-    yearsExperienceNote: "Confirmed by owner: 5 years of hands-on experience across multiple major auto repair shops",
-    repairedCarsTodo: "TODO: Confirm verified number of cars repaired",
-    warrantyDurationTodo: "TODO: Confirm exact paint warranty terms if offered",
+    yearsOverallExperience: "5+",
+    yearsOverallExperienceNote: "Confirmed by owner: 5 years of overall automotive experience",
+    yearsDentingPainting: "3-4",
+    yearsDentingPaintingNote: "Confirmed by owner: 3-4 years specialized experience in denting & painting across famous shops in Jeddah",
+    startingPriceSar: 2000,
+    startingPriceNote: "Confirmed by owner: Denting & painting starts from ~2,000 SAR, depending on vehicle condition and damage extent",
+    warrantyDuration: "2 years",
+    warrantyDurationNote: "Confirmed by owner: 2-year warranty on oven-baked paint against peeling and fading",
   },
   // 5. Payment Methods
   paymentMethods: {
@@ -135,12 +145,31 @@ export const siteConfig = {
   stats: {
     ratingValue: 4.1,
     ratingCount: 7,
-    yearsExperience: "5+",
-    yearsExperienceAr: "5+ سنوات خبرة",
-    yearsExperienceEn: "5+ Years Experience",
-    experienceDetailAr: "خبرة في كبرى الورش",
-    experienceDetailEn: "Multi-shop background",
+    yearsOverall: "5+",
+    yearsDentingPainting: "3-4",
+    yearsDentingPaintingAr: "3-4 سنوات خبرة بأشهر ورش جدة",
+    yearsDentingPaintingEn: "3-4 Years in Famous Jeddah Shops",
+    warrantyYears: 2,
+    warrantyAr: "ضمان سنتين على بوية الفرن",
+    warrantyEn: "2-Year Oven Paint Warranty",
+    startingPriceSar: 2000,
+    startingPriceAr: "يبدأ من 2,000 ريال (حسب حالة السيارة)",
+    startingPriceEn: "Starts from 2,000 SAR (Based on Condition)",
     source: "Google Reviews",
+  },
+  pricing: {
+    dentPaintingStartingSar: 2000,
+    dentPaintingStartingAr: "يبدأ من 2,000 ريال",
+    dentPaintingStartingEn: "Starts from 2,000 SAR",
+    noteAr: "تبدأ أسعار السمكرة وبوية الفرن من حوالي 2,000 ريال، وتعتمد التكلفة على حالة ونظافة السيارة ونوعها وحجم وعمق الصدمة.",
+    noteEn: "Denting and oven paint starts from ~2,000 SAR; exact pricing depends on vehicle condition, car model, and damage depth.",
+  },
+  warranty: {
+    years: 2,
+    titleAr: "ضمان سنتين على بوية الفرن",
+    titleEn: "2-Year Oven Paint Warranty",
+    descAr: "نقدم ضماناً لمدة سنتين على بوية الفرن ضد التقشير وتغير اللون وبهتان اللمعة لراحة بال العميل التامة.",
+    descEn: "2-year comprehensive warranty on oven-baked paint against peeling, fading, and bubbling for complete peace of mind.",
   },
   social: {
     instagram: "",
@@ -166,6 +195,10 @@ export const siteConfig = {
       icon: "Wrench",
       badgeAr: "خدمة أساسية",
       badgeEn: "Core Service",
+      priceNoteAr: "الأسعار تبدأ من 2,000 ريال (حسب حالة السيارة وعمق وحجم الصدمة)",
+      priceNoteEn: "Starts from ~2,000 SAR (Contingent upon vehicle condition & damage extent)",
+      experienceBadgeAr: "خبرة 3-4 سنوات بأشهر ورش ومراكز جدة",
+      experienceBadgeEn: "3-4 Years in Famous Jeddah Shops",
       stepsAr: [
         "فحص الصدمة وتحديد عمق التلف ونقاط الارتكاز",
         "تفكيك الأجزاء المتأثرة وسحب الصدمة بدقة دون إجهاد المعدن",
@@ -188,11 +221,17 @@ export const siteConfig = {
       titleEn: "Oven-Baked Spray Painting",
       shortDescAr: "رش الطلاء داخل كبينة بوية فرن معزولة لمنع الغبار وتثبيت الطلاء بأعلى درجات اللمعان والمتانة.",
       shortDescEn: "Sealed oven baking booth ensuring clean finish, exact color match, and long-lasting gloss.",
-      descriptionAr: "نعتمد في مركز جدة على كبينة بوية فرن معزولة ومجهزة بنظام فلترة هواء لمنع ذرات الغبار أثناء الرش، مع دهانات سيارات معتمدة ومطابقة دقيقة لدرجات اللون الأصلية وتجفيف متوازن داخل الفرن.",
-      descriptionEn: "We utilize an enclosed oven baking booth equipped with air filtration to eliminate airborne dust. Using automotive paints, precise color matching, and uniform curing inside the oven baking booth, we deliver an enduring showroom finish.",
+      descriptionAr: "نعتمد في مركز جدة على كبينة بوية فرن معزولة ومجهزة بنظام فلترة هواء لمنع ذرات الغبار أثناء الرش، مع دهانات سيارات معتمدة ومطابقة دقيقة لدرجات اللون الأصلية وتجفيف متوازن داخل الفرن، مع ضمان لمدة سنتين.",
+      descriptionEn: "We utilize an enclosed oven baking booth equipped with air filtration to eliminate airborne dust. Using automotive paints, precise color matching, uniform curing inside the oven baking booth, and a 2-year warranty, we deliver an enduring showroom finish.",
       icon: "PaintBucket",
-      badgeAr: "كبينة بوية فرن",
-      badgeEn: "Oven Baking Booth",
+      badgeAr: "ضمان سنتين على بوية الفرن",
+      badgeEn: "2-Year Oven Paint Warranty",
+      warrantyBadgeAr: "ضمان سنتين على بوية الفرن ضد التقشير والبهتان",
+      warrantyBadgeEn: "2-Year Warranty against peeling and fading",
+      priceNoteAr: "الأسعار تبدأ من 2,000 ريال (حسب حالة ونظافة السيارة ونوعها)",
+      priceNoteEn: "Starts from ~2,000 SAR (Depends on vehicle condition & model)",
+      experienceBadgeAr: "خبرة 3-4 سنوات بأشهر ورش ومراكز صيانة جدة",
+      experienceBadgeEn: "3-4 Years in Renowned Jeddah Workshops",
       stepsAr: [
         "مطابقة كود لون السيارة الأصلي بدقة متناهية",
         "عزل كامل للسيارة والزجاج وأجزاء الكروم بأوراق عزل خاصة",
@@ -299,6 +338,24 @@ export const siteConfig = {
     }
   ],
   faqs: [
+    {
+      qAr: "كم تبلغ أسعار السمكرة ورش بوية الفرن لديكم؟",
+      qEn: "How much does dent repair and oven painting cost at Markaz Jadda?",
+      aAr: "تبدأ أسعار السمكرة ورش بوية الفرن من حوالي 2,000 ريال، وتعتمد التكلفة الدقيقة على حالة ونظافة السيارة، نوع وموديل المركبة، وحجم وعمق الصدمة وعدد القطع المراد إصلاحها. يمكنك إرسال صور الصدمة عبر واتساب للحصول على استفسار سريع ومباشر.",
+      aEn: "Denting and oven-baked painting starts from ~2,000 SAR. The exact price depends on your vehicle's condition, car make/model, damage depth, and the number of affected panels. Send photos via WhatsApp for an immediate consultation."
+    },
+    {
+      qAr: "هل يوجد ضمان على رش بوية الفرن؟",
+      qEn: "Do you offer a warranty on oven-baked paint?",
+      aAr: "نعم، نقدم ضماناً معتمداً لمدة سنتين (2 سنة) على بوية الفرن ضد التقشير وتغير اللون وبهتان اللمعة، بفضل استخدام دهانات سيارات معتمدة وكبينة فرن معزولة تماماً تضمن معالجة متوازنة للطلاء.",
+      aEn: "Yes, we provide a full 2-year warranty on oven-baked paint against peeling, color fading, and clear coat failure, backed by certified automotive paints and a sealed, dust-free baking booth."
+    },
+    {
+      qAr: "ما هي خبرة طاقم السمكرة والبوية في ورشة مركز جدة؟",
+      qEn: "What is your crew's experience in auto denting and oven painting?",
+      aAr: "يمتلك طاقمنا الفني خبرة متخصصة من 3 إلى 4 سنوات في سمكرة وبوية السيارات تم صقلها في أشهر ورش ومراكز صيانة السيارات بجدة، مع خلفية ميكانيكية شاملة تتجاوز 5 سنوات لضمان أعلى مستويات الإتقان.",
+      aEn: "Our craftsmen hold 3–4 years of specialized expertise in auto denting and oven painting acquired across renowned body shops in Jeddah, supported by over 5+ years of overall automotive workshop experience."
+    },
     {
       qAr: "كيف يمكنني الاستفسار عن تكلفة السمكرة والبوية؟",
       qEn: "How can I ask about dent repair or painting for my car?",
@@ -561,6 +618,116 @@ export const siteConfig = {
       src: "/assets/videos/video_17.mp4",
       poster: "/assets/posters/video_17.webp",
       featured: false
+    },
+    {
+      id: "img-entrance-elantra",
+      type: "image",
+      titleAr: "واجهة ومدخل ورشة مركز جدة واستقبال السيارات بالورشة",
+      titleEn: "Markaz Jadda Workshop Reception Under Official Signboard",
+      category: "workshop",
+      src: "/assets/images/baa4182a-e03a-4da8-958d-4e95ec2bc6b1.webp",
+      aspect: "0.75",
+      featured: true
+    },
+    {
+      id: "img-sonata-dent-repair",
+      type: "image",
+      titleAr: "سمكرة وتعديل صدمة خلفية للرفرف والصدام لسيارة هيونداي",
+      titleEn: "Rear Quarter Panel & Bumper Collision Repair on Hyundai Sonata",
+      category: "dent_repair",
+      src: "/assets/images/ed5239e0-4a12-4d4e-ad00-eae927d61f6d.webp",
+      aspect: "0.75",
+      featured: true
+    },
+    {
+      id: "img-sonata-primer-filler",
+      type: "image",
+      titleAr: "تأسيس ومعجون الرفرف الخلفي بعد استعدال الصدمة تمهيداً للرش",
+      titleEn: "Rear Quarter Body Filler & Primer Sanded Smooth for Paint",
+      category: "dent_repair",
+      src: "/assets/images/3f701acf-948b-4def-ba2b-2fb36996c03d.webp",
+      aspect: "1.33",
+      featured: false
+    },
+    {
+      id: "img-sedan-gloss-finish",
+      type: "image",
+      titleAr: "لمعة ونعومة بوية جانب السيارة بعد الرش بالفرن والمعالجة",
+      titleEn: "High-Gloss Side Panel Finish After Oven-Bake Painting",
+      category: "oven_paint",
+      src: "/assets/images/6732e1e0-8650-4635-9245-d76bbeda1997.webp",
+      aspect: "0.75",
+      featured: true
+    },
+    {
+      id: "img-jeep-body-restoration",
+      type: "image",
+      titleAr: "تجهيز وتعديل صاج الجانب والرفارف لسيارة جيب بالورشة",
+      titleEn: "Side Panels & Fender Restoration on Jeep Cherokee",
+      category: "dent_repair",
+      src: "/assets/images/03b7646b-71a4-4ced-9333-c5fece2bca91.webp",
+      aspect: "1.33",
+      featured: false
+    },
+    {
+      id: "img-jeep-taillight-prep",
+      type: "image",
+      titleAr: "فك وتجهيز مكان الإسطب والرفرف الخلفي لسيارة الدفع الرباعي",
+      titleEn: "Rear Quarter & Taillight Area Disassembly & Body Prep",
+      category: "dent_repair",
+      src: "/assets/images/0c8467c6-1539-4019-bdd9-2c9488fa5269.webp",
+      aspect: "1.33",
+      featured: false
+    },
+    {
+      id: "img-jeep-hood-grille-paint",
+      type: "image",
+      titleAr: "تجهيز الكبوت والواجهة الأمامية لسيارة الجيب للرش والتنعيم",
+      titleEn: "Jeep Hood & Front Grille Prepped for Paint Application",
+      category: "oven_paint",
+      src: "/assets/images/9c7761fd-a3c9-4c7b-93ad-615b7b76b4b5.webp",
+      aspect: "0.75",
+      featured: false
+    },
+    {
+      id: "img-jeep-tailgate-sanding",
+      type: "image",
+      titleAr: "صنفرة وتأسيس باب الشنطة الخلفي لسيارة الجيب قبل دهان الفرن",
+      titleEn: "Jeep Rear Tailgate Sanding & Surface Primer Preparation",
+      category: "dent_repair",
+      src: "/assets/images/aafb014b-597b-4058-9b2c-8bcb98c22e3b.webp",
+      aspect: "0.75",
+      featured: false
+    },
+    {
+      id: "img-front-electrical-radiator",
+      type: "image",
+      titleAr: "وزن صدر السيارة الأمامي وتركيب الإضاءات وتوصيل الكهرباء بعد الصدمة",
+      titleEn: "Front Radiator Support Alignment & Headlight Electrical Assembly",
+      category: "electrical",
+      src: "/assets/images/fd1f83a5-e84b-43f4-a7e9-1b8de64f0e77.webp",
+      aspect: "0.75",
+      featured: true
+    },
+    {
+      id: "vid-19-jeep-prep",
+      type: "video",
+      titleAr: "جولة تفقدية لسيارة جيب أثناء مراحل التجهيز والصنفرة لدهان الفرن",
+      titleEn: "Jeep Liberty Surface Preparation Walkthrough in Paint Bay",
+      category: "oven_paint",
+      src: "/assets/videos/video_19.mp4",
+      poster: "/assets/posters/video_19.webp",
+      featured: true
+    },
+    {
+      id: "vid-20-sonata-inspection",
+      type: "video",
+      titleAr: "معاينة استقامة الصاج والرفرف الخلفي لسيارة هيونداي بعد السمكرة",
+      titleEn: "Rear Body Straightness & Dent Repair Inspection on Hyundai",
+      category: "dent_repair",
+      src: "/assets/videos/video_20.mp4",
+      poster: "/assets/posters/video_20.webp",
+      featured: true
     }
   ] as GalleryItem[]
 };

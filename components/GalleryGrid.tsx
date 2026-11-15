@@ -21,6 +21,7 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ items, locale, dict })
     { id: "image", label: dict.galleryPage.filterPhotos },
     { id: "dent_repair", label: dict.galleryPage.filterDent },
     { id: "oven_paint", label: dict.galleryPage.filterPaint },
+    { id: "electrical", label: isArabic ? "كهرباء وميكانيكا" : "Electrical & Mechanical" },
     { id: "workshop", label: isArabic ? "معدات الورشة" : "Workshop & Gear" },
   ];
 

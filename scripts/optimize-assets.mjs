@@ -53,22 +53,27 @@ for (const f of imageFiles) {
 
   const metadata = await sharp(fullPath).metadata();
 
-  // Full size WebP
-  await sharp(fullPath)
-    .webp({ quality: 82, effort: 4 })
-    .toFile(webpPath);
+  if (!fs.existsSync(webpPath) || !fs.existsSync(webpMedium) || !fs.existsSync(webpThumb)) {
+    // Full size WebP
+    await sharp(fullPath)
+      .webp({ quality: 82, effort: 4 })
+      .toFile(webpPath);
 
-  // 800px width
-  await sharp(fullPath)
-    .resize({ width: 800, withoutEnlargement: true })
-    .webp({ quality: 80 })
-    .toFile(webpMedium);
+    // 800px width
+    await sharp(fullPath)
+      .resize({ width: 800, withoutEnlargement: true })
+      .webp({ quality: 80 })
+      .toFile(webpMedium);
 
-  // 400px thumb
-  await sharp(fullPath)
-    .resize({ width: 400, withoutEnlargement: true })
-    .webp({ quality: 78 })
-    .toFile(webpThumb);
+    // 400px thumb
+    await sharp(fullPath)
+      .resize({ width: 400, withoutEnlargement: true })
+      .webp({ quality: 78 })
+      .toFile(webpThumb);
+    console.log(`Processed new image: ${f} -> ${baseName}.webp`);
+  } else {
+    console.log(`Skipped existing image: ${f}`);
+  }
 
   processedImages.push({
     originalName: f,
@@ -80,8 +85,6 @@ for (const f of imageFiles) {
     src800: `/assets/images/${baseName}-800.webp`,
     src400: `/assets/images/${baseName}-400.webp`,
   });
-
-  console.log(`Processed image: ${f} -> ${baseName}.webp`);
 }
 
 console.log('--- 3. Compressing videos with FFmpeg & extracting posters ---');
@@ -96,23 +99,28 @@ videoFiles.forEach((f, idx) => {
   const posterJpg = path.join(publicPostersDir, `${cleanId}.jpg`);
   const posterWebp = path.join(publicPostersDir, `${cleanId}.webp`);
 
-  // 1. Extract poster at 1.5s
-  try {
-    execSync(`"${ffmpegBin}" -y -ss 00:00:01.50 -i "${fullPath}" -vframes 1 -q:v 2 "${posterJpg}"`, { stdio: 'pipe' });
-    // Convert poster to webp via sharp
-    sharp(posterJpg).webp({ quality: 82 }).toFile(posterWebp);
-  } catch (e) {
-    console.error(`Poster extract error on ${f}:`, e.message);
+  if (!fs.existsSync(posterWebp)) {
+    // 1. Extract poster at 1.5s
+    try {
+      execSync(`"${ffmpegBin}" -y -ss 00:00:01.50 -i "${fullPath}" -vframes 1 -q:v 2 "${posterJpg}"`, { stdio: 'pipe' });
+      // Convert poster to webp via sharp
+      sharp(posterJpg).webp({ quality: 82 }).toFile(posterWebp);
+    } catch (e) {
+      console.error(`Poster extract error on ${f}:`, e.message);
+    }
   }
 
-  // 2. Compress video to optimized H.264 mp4 (crf 26, max width 720, faststart for streaming)
-  try {
-    console.log(`Compressing [${idx + 1}/${videoFiles.length}] ${f}...`);
-    execSync(`"${ffmpegBin}" -y -i "${fullPath}" -vf "scale='min(720,iw)':-2" -c:v libx264 -crf 27 -preset fast -movflags +faststart -c:a aac -b:a 96k "${outMp4}"`, { stdio: 'pipe' });
-  } catch (e) {
-    console.error(`Video compress error on ${f}:`, e.message);
-    // If compress failed, copy original
-    fs.copyFileSync(fullPath, outMp4);
+  // 2. Compress video to optimized H.264 mp4
+  if (!fs.existsSync(outMp4)) {
+    try {
+      console.log(`Compressing [${idx + 1}/${videoFiles.length}] ${f}...`);
+      execSync(`"${ffmpegBin}" -y -i "${fullPath}" -vf "scale='min(720,iw)':-2" -c:v libx264 -crf 27 -preset fast -movflags +faststart -c:a aac -b:a 96k "${outMp4}"`, { stdio: 'pipe' });
+    } catch (e) {
+      console.error(`Video compress error on ${f}:`, e.message);
+      fs.copyFileSync(fullPath, outMp4);
+    }
+  } else {
+    console.log(`Skipped existing video: ${cleanId} (${f})`);
   }
 
   const statOrig = fs.statSync(fullPath);
