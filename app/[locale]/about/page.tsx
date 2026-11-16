@@ -80,41 +80,124 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
         </div>
       </div>
 
-      {/* Workshop Crew Section */}
-      <section className="py-16 mb-24 rounded-3xl bg-shop-card border border-shop-border p-8 sm:p-12 glossy-panel">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-          <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-950 border border-shop-border shadow-xl">
-            <img
-              src="/assets/images/6ad67255-42f1-45ff-badb-6edb019e3035.webp"
-              alt={isArabic ? "فني الورشة أثناء العمل" : "Workshop Technician"}
-              className="w-full h-full object-cover"
-            />
-          </div>
+      {/* Meet Our Master Craftsmen & Specialists (2 Dedicated Technicians with 5 Years Experience) */}
+      <section className="mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="text-xs font-bold text-shop-gold uppercase tracking-wider bg-shop-gold/10 px-3 py-1 rounded-full border border-shop-gold/20 inline-block">
+            {dict.aboutPage.teamBadge || (isArabic ? "طاقم العمل والخبرات" : "Master Craftsmen")}
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white mt-3 mb-3">
+            {dict.aboutPage.teamTitle || (isArabic ? "تعرف على الفنيين المعتمدين في مركز جدة" : "Meet Our Certified Technicians")}
+          </h2>
+          <p className="text-sm sm:text-base text-shop-muted leading-relaxed">
+            {dict.aboutPage.teamSubtitle || (isArabic
+              ? "فنيون متمرسون بخبرة 5 سنوات في سمكرة وبوية وفرن وروغن السيارات لضمان عودة سيارتك لحالة الوكالة."
+              : "Dedicated specialists with 5 years of proven hands-on experience in auto body dent repair, oven-baked painting, and Rogan coating.")}
+          </p>
+        </div>
 
-          <div className="lg:col-span-2 space-y-5">
-            <span className="text-xs font-bold text-shop-gold uppercase tracking-wider bg-shop-gold/10 px-3 py-1 rounded-full border border-shop-gold/20 inline-block">
-              {isArabic ? "طاقم الفنيين" : "Workshop Technicians"}
-            </span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {siteConfig.team.map((member) => {
+            const role = isArabic ? member.roleAr : member.roleEn;
+            const specialty = isArabic ? member.specialtyAr : member.specialtyEn;
+            const exp = isArabic ? member.experienceAr : member.experienceEn;
+            const bio = isArabic ? member.bioAr : member.bioEn;
+            const skills = isArabic ? member.skillsAr : member.skillsEn;
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              {isArabic ? "طاقم فني متخصص في السمكرة والدهان" : "Experienced Technical Crew in Jeddah"}
-            </h2>
+            const whatsappConsultUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(
+              isArabic
+                ? `السلام عليكم، أود استشارة ${role} بخصوص سيارتي وإرسال الصور.`
+                : `Hello Markaz Jadda, I want to consult your ${role} regarding my car.`
+            )}`;
 
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              {isArabic
-                ? "يمتلك طاقمنا الفني في مركز جدة خبرة عملية دقيقة في التعامل مع مختلف أنواع الصدمات وتعديل الهياكل المعدنية ومطابقة دهانات السيارات. يحرص الفنيون على فحص كل سيارة والتأكد من مطابقة اللون والخطوط الأصلية قبل التسليم."
-                : "Our technicians at Markaz Jadda possess hands-on expertise handling diverse auto collision repairs, sheet metal alignment, and vehicle paint formulation. Every car is thoroughly inspected to guarantee seamless contours and exact finish matching before handover."}
-            </p>
+            return (
+              <div
+                key={member.id}
+                className="rounded-3xl bg-shop-card border border-shop-border overflow-hidden glossy-panel flex flex-col justify-between shadow-2xl hover:border-shop-gold/40 transition-all group"
+              >
+                <div>
+                  {/* Photo Header with Badge Overlay */}
+                  <div className="relative aspect-[4/3] w-full bg-neutral-950 overflow-hidden">
+                    <picture>
+                      <source type="image/webp" srcSet={`${member.imageThumb} 400w, ${member.image} 800w`} />
+                      <img
+                        src={member.image}
+                        alt={role}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                        loading="lazy"
+                      />
+                    </picture>
 
-            <div className="p-4 rounded-2xl bg-shop-charcoal/80 border border-white/5 text-xs text-shop-muted leading-relaxed">
-              <strong className="text-white block mb-1">
-                {isArabic ? "شهادة عميل من خرائط جوجل:" : "Google Review Quote:"}
-              </strong>
-              <span className="italic text-slate-300">
-                &ldquo;{siteConfig.reviews[0].commentAr}&rdquo;
-              </span>
-            </div>
-          </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent pointer-events-none" />
+
+                    {/* Top Badges */}
+                    <div className="absolute top-4 inset-x-4 flex items-center justify-between gap-2 z-10 pointer-events-none">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold">
+                        <Award className="w-3.5 h-3.5 text-shop-gold shrink-0" />
+                        <span>{exp}</span>
+                      </span>
+                      <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase backdrop-blur-md">
+                        {isArabic ? "معتمد بالورشة" : "Certified"}
+                      </span>
+                    </div>
+
+                    {/* Bottom Title on Image */}
+                    <div className="absolute bottom-3 inset-x-4 z-10">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-white drop-shadow-md">
+                        {role}
+                      </h3>
+                      <p className="text-xs font-semibold text-shop-gold">
+                        {specialty}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Body Content */}
+                  <div className="p-6 sm:p-8 space-y-6">
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                      {bio}
+                    </p>
+
+                    {/* Skills Checklist */}
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-shop-gold mb-3 flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4" />
+                        <span>{isArabic ? "المهام والخبرات التخصصية:" : "Core Technical Mastery:"}</span>
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        {skills.map((skill, sIdx) => (
+                          <div
+                            key={sIdx}
+                            className="p-2.5 rounded-xl bg-shop-charcoal/80 border border-white/5 text-xs text-slate-300 flex items-start gap-2"
+                          >
+                            <span className="w-4 h-4 rounded-full bg-shop-gold/15 text-shop-gold font-bold flex items-center justify-center text-[9px] shrink-0 mt-0.5">
+                              ✓
+                            </span>
+                            <span className="leading-snug">{skill}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer Action */}
+                <div className="p-6 sm:p-8 pt-0">
+                  <a
+                    href={whatsappConsultUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-shop-gold hover:bg-shop-gold-hover text-neutral-950 font-bold text-xs sm:text-sm transition-all shadow-lg shadow-shop-gold/20 active:scale-95"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-current" />
+                    <span>
+                      {isArabic ? `تواصل واستشر ${role}` : `Consult ${role}`}
+                    </span>
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

@@ -137,6 +137,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
           const whatsappUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(prefilledMsg)}`;
 
           const isEven = index % 2 === 1;
+          const assignedSpecialist = siteConfig.team?.find((m) => m.serviceId === svc.id);
 
           return (
             <section
@@ -208,6 +209,33 @@ export default function ServicesPage({ params }: { params: { locale: string } })
                         <span>{isArabic ? svc.experienceBadgeAr : svc.experienceBadgeEn}</span>
                       </span>
                     )}
+                  </div>
+                )}
+
+                {/* Assigned Master Craftsman Card (Worker Profile) */}
+                {assignedSpecialist && (
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-shop-charcoal/90 border border-shop-gold/30 flex items-center gap-3.5 shadow-md">
+                    <img
+                      src={assignedSpecialist.imageThumb}
+                      alt={isArabic ? assignedSpecialist.roleAr : assignedSpecialist.roleEn}
+                      className="w-12 h-12 rounded-xl object-cover object-top border border-shop-gold/40 shrink-0"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-bold text-shop-gold bg-shop-gold/10 px-2 py-0.5 rounded-md border border-shop-gold/20">
+                          {isArabic ? assignedSpecialist.experienceAr : assignedSpecialist.experienceEn}
+                        </span>
+                        <span className="text-[10px] text-emerald-400 font-semibold">
+                          {isArabic ? "• إشراف وتنفيذ مباشر" : "• Direct Execution"}
+                        </span>
+                      </div>
+                      <h4 className="text-xs sm:text-sm font-bold text-white truncate mt-0.5">
+                        {isArabic ? assignedSpecialist.roleAr : assignedSpecialist.roleEn}
+                      </h4>
+                      <p className="text-[11px] text-shop-muted truncate">
+                        {isArabic ? assignedSpecialist.specialtyAr : assignedSpecialist.specialtyEn}
+                      </p>
+                    </div>
                   </div>
                 )}
 

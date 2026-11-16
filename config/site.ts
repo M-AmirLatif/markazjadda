@@ -48,6 +48,25 @@ export interface GalleryItem {
   featured?: boolean;
 }
 
+export interface WorkerMember {
+  id: string;
+  roleAr: string;
+  roleEn: string;
+  specialtyAr: string;
+  specialtyEn: string;
+  experienceYears: number;
+  experienceAr: string;
+  experienceEn: string;
+  bioAr: string;
+  bioEn: string;
+  image: string;
+  imageThumb: string;
+  secondaryImage?: string;
+  serviceId: string;
+  skillsAr: string[];
+  skillsEn: string[];
+}
+
 /**
  * ⚠️ OWNER TODO CHECKLIST:
  * Every unverified claim has been moved here so the owner can confirm and re-enable with verified details.
@@ -296,6 +315,64 @@ export const siteConfig = {
       ]
     }
   ],
+  team: [
+    {
+      id: "worker-denting",
+      roleAr: "فني سمكرة وتعديل صدمات الهيكل",
+      roleEn: "Senior Body & Dent Repair Craftsman",
+      specialtyAr: "سمكرة وبوية وتعديل الصدمات والشاسيه بدقة متناهية",
+      specialtyEn: "Auto body straightening, dent repair & chassis restoration",
+      experienceYears: 5,
+      experienceAr: "5 سنوات خبرة معتمدة",
+      experienceEn: "5 Years Hands-on Experience",
+      bioAr: "يمتلك خبرة تمتد لـ 5 سنوات في سمكرة وتعديل صدمات مختلف أنواع السيارات بدقة متناهية، وإصلاح الشاسيه والصاج وسحب الضربات وإرجاع أبعاد وفواصل الوكالة الأصلية.",
+      bioEn: "Specializes in precision auto body repair and chassis realignment with 5 years of proven hands-on experience, restoring factory body lines and tolerances on all passenger cars and SUVs.",
+      image: "/assets/workers/worker-dent-primary.webp",
+      imageThumb: "/assets/workers/worker-dent-primary-400.webp",
+      secondaryImage: "/assets/workers/worker-dent-standing.webp",
+      serviceId: "dent_repair",
+      skillsAr: [
+        "سحب الصدمات وتعديل الشاسيه",
+        "تعديل الرفارف، الأبواب، الكبوت والشنطة",
+        "ضبط فواصل الأبواب وتطابق مقاييس المصنع",
+        "صنفرة وتجهيز الأسطح المعدنية قبل الدهان"
+      ],
+      skillsEn: [
+        "Chassis realignment & hydraulic dent pulling",
+        "Fender, door, hood & trunk reconstruction",
+        "Factory gap tolerance & line calibration",
+        "Surface smoothing & anti-rust foundation"
+      ]
+    },
+    {
+      id: "worker-paint-rogan",
+      roleAr: "فني دهان بوية فرن وروغن وتلميع السيارات",
+      roleEn: "Automotive Paint, Oven Coating & Rogan Specialist",
+      specialtyAr: "دهان بوية فرن، رش طبقات الحماية، وروغن وتلميع السيارات",
+      specialtyEn: "Oven-baked spray painting, protective coatings, Rogan & high-gloss finishing",
+      experienceYears: 5,
+      experienceAr: "5 سنوات خبرة متخصصة",
+      experienceEn: "5 Years Dedicated Experience",
+      bioAr: "متخصص في دهان وبوية الفرن وروغن السيارات بخبرة 5 سنوات، يتقن مطابقة الألوان بالكمبيوتر ورش طبقات البرايمر والورنيش الكريستالي داخل كبينة بوية الفرن المعزولة لضمان أعلى بريق وحماية تدوم لسنوات.",
+      bioEn: "Automotive paint and 'Rogan' coating specialist with 5 years of dedicated craftsmanship, mastering computerized color formulation, primer and clear coat application inside the sealed oven baking booth for a long-lasting showroom gloss.",
+      image: "/assets/workers/worker-paint-primary.webp",
+      imageThumb: "/assets/workers/worker-paint-primary-400.webp",
+      secondaryImage: "/assets/workers/worker-paint-car.webp",
+      serviceId: "oven_paint",
+      skillsAr: [
+        "مطابقة ألوان الوكالة بالكمبيوتر 100%",
+        "رش بوية فرن داخل كبينة معزولة خالية من الغبار",
+        "أعمال الدهان والروغن (Rogan) وحماية الطلاء",
+        "تلميع كريستالي ومعالجة متوازنة للبوية بالحرارة"
+      ],
+      skillsEn: [
+        "100% computerized factory color match",
+        "Dust-free spray painting in sealed oven booth",
+        "Professional Rogan coating & surface gloss",
+        "High-gloss clear coat & thermal curing"
+      ]
+    }
+  ] as WorkerMember[],
   reviews: [
     {
       id: "rev-1",
@@ -338,6 +415,12 @@ export const siteConfig = {
     }
   ],
   faqs: [
+    {
+      qAr: "من يشرف على سمكرة ودهان وروغن سيارتي في مركز جدة؟",
+      qEn: "Who oversees the dent repair, painting, and Rogan work on my car?",
+      aAr: "يشرف على سيارتك فنيان متمرسان؛ الأول متخصص في سمكرة وتعديل صدمات الهيكل والشاسيه بخبرة 5 سنوات، والثاني متخصص في رش بوية الفرن وروغن وتلميع وحماية طلاء السيارات بخبرة 5 سنوات، وكلاهما يمتلكان مهارة عالية ودقة متناهية لضمان أفضل نتيجة.",
+      aEn: "Your car is handled by two dedicated specialists: our senior body repair craftsman with 5 years experience in denting and chassis alignment, and our automotive paint and Rogan coating specialist with 5 years experience in oven spray painting and high-gloss finishing."
+    },
     {
       qAr: "كم تبلغ أسعار السمكرة ورش بوية الفرن لديكم؟",
       qEn: "How much does dent repair and oven painting cost at Markaz Jadda?",
@@ -727,6 +810,26 @@ export const siteConfig = {
       category: "dent_repair",
       src: "/assets/videos/video_20.mp4",
       poster: "/assets/posters/video_20.webp",
+      featured: true
+    },
+    {
+      id: "img-worker-dent",
+      type: "image",
+      titleAr: "فني السمكرة وتعديل صدمات الهيكل بورشة مركز جدة (خبرة 5 سنوات)",
+      titleEn: "Senior Body & Dent Repair Craftsman at Markaz Jadda (5 Years Experience)",
+      category: "workshop",
+      src: "/assets/workers/worker-dent-standing.webp",
+      aspect: "0.75",
+      featured: true
+    },
+    {
+      id: "img-worker-paint-rogan",
+      type: "image",
+      titleAr: "فني دهان بوية الفرن وروغن وتلميع السيارات بمركز جدة (خبرة 5 سنوات)",
+      titleEn: "Automotive Paint, Oven Coating & Rogan Specialist (5 Years Experience)",
+      category: "workshop",
+      src: "/assets/workers/worker-paint-primary.webp",
+      aspect: "0.75",
       featured: true
     }
   ] as GalleryItem[]

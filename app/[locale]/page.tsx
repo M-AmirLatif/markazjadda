@@ -387,6 +387,100 @@ export default function HomePage({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
+      {/* 4.5 MEET THE EXPERT CRAFTSMEN (5 YEARS EXPERIENCE EACH) */}
+      <section className="py-20 bg-neutral-950 border-b border-shop-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs font-bold text-shop-gold uppercase tracking-wider bg-shop-gold/10 px-3 py-1 rounded-full border border-shop-gold/20 inline-block">
+              {isArabic ? "طاقم العمل والخبرة الميدانية" : "Master Craftsmen"}
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white mt-4 mb-3">
+              {dict.home.teamTitle || (isArabic ? "طاقم فني خبير يشرف على سيارتك" : "Expert Hands Behind Every Repair")}
+            </h2>
+            <p className="text-sm sm:text-base text-shop-muted leading-relaxed">
+              {dict.home.teamSubtitle || (isArabic
+                ? "نعتمد على فنيين متخصصين بخبرة 5 سنوات في سمكرة وتعديل الصدمات ودهان وروغن بوية الفرن"
+                : "Supervised by certified specialists with 5 years experience in auto body denting, oven painting, and Rogan coating")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {siteConfig.team.map((member) => {
+              const role = isArabic ? member.roleAr : member.roleEn;
+              const specialty = isArabic ? member.specialtyAr : member.specialtyEn;
+              const exp = isArabic ? member.experienceAr : member.experienceEn;
+              const skills = isArabic ? member.skillsAr : member.skillsEn;
+
+              const whatsappConsultUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(
+                isArabic
+                  ? `السلام عليكم، أود استشارة ${role} بخصوص سيارتي.`
+                  : `Hello Markaz Jadda, I want to consult your ${role} about my car.`
+              )}`;
+
+              return (
+                <div
+                  key={member.id}
+                  className="rounded-3xl bg-shop-card border border-shop-border p-6 flex flex-col justify-between glossy-panel hover:border-shop-gold/40 transition-all group"
+                >
+                  <div>
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900 mb-5">
+                      <img
+                        src={member.image}
+                        alt={role}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-3 end-3">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold">
+                          <Award className="w-3.5 h-3.5 text-shop-gold shrink-0" />
+                          <span>{exp}</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg sm:text-xl font-extrabold text-white mb-1 group-hover:text-shop-gold transition-colors">
+                      {role}
+                    </h3>
+                    <p className="text-xs font-semibold text-shop-gold mb-4">
+                      {specialty}
+                    </p>
+
+                    <div className="space-y-1.5 mb-6">
+                      {skills.slice(0, 3).map((skill, sIdx) => (
+                        <div key={sIdx} className="flex items-center gap-2 text-xs text-slate-300">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-shop-gold shrink-0" />
+                          <span>{skill}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <Link
+                      href={`/${locale}/about/`}
+                      className="text-xs font-bold text-white hover:text-shop-gold flex items-center gap-1 transition-colors"
+                    >
+                      <span>{dict.common.learnMore}</span>
+                      {isArabic ? <ChevronLeft className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+                    </Link>
+
+                    <a
+                      href={whatsappConsultUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-shop-gold/15 hover:bg-shop-gold text-shop-gold hover:text-neutral-950 border border-shop-gold/30 transition-all"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5 fill-current" />
+                      <span>{isArabic ? "استشارة مباشرة" : "Direct WhatsApp"}</span>
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* 5. BEFORE & AFTER TRANSFORMATION SHOWCASE */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center max-w-3xl mx-auto mb-14">
