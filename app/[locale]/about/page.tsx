@@ -123,37 +123,36 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
                       <img
                         src={member.image}
                         alt={role}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                         loading="lazy"
                       />
                     </picture>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/40 via-transparent to-black/20 pointer-events-none" />
 
                     {/* Top Badges */}
                     <div className="absolute top-4 inset-x-4 flex items-center justify-between gap-2 z-10 pointer-events-none">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold shadow-md">
                         <Award className="w-3.5 h-3.5 text-shop-gold shrink-0" />
                         <span>{exp}</span>
                       </span>
-                      <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase backdrop-blur-md">
+                      <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase backdrop-blur-md shadow-md">
                         {isArabic ? "معتمد بالورشة" : "Certified"}
                       </span>
-                    </div>
-
-                    {/* Bottom Title on Image */}
-                    <div className="absolute bottom-3 inset-x-4 z-10">
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-white drop-shadow-md">
-                        {role}
-                      </h3>
-                      <p className="text-xs font-semibold text-shop-gold">
-                        {specialty}
-                      </p>
                     </div>
                   </div>
 
                   {/* Body Content */}
                   <div className="p-6 sm:p-8 space-y-6">
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-1.5 group-hover:text-shop-gold transition-colors">
+                        {role}
+                      </h3>
+                      <p className="text-xs sm:text-sm font-semibold text-shop-gold">
+                        {specialty}
+                      </p>
+                    </div>
+
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                       {bio}
                     </p>

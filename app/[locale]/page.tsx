@@ -424,14 +424,17 @@ export default function HomePage({ params }: { params: { locale: string } }) {
                 >
                   <div>
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900 mb-5">
-                      <img
-                        src={member.image}
-                        alt={role}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
-                        loading="lazy"
-                      />
+                      <picture>
+                        <source type="image/webp" srcSet={`${member.imageThumb} 400w, ${member.image} 800w`} />
+                        <img
+                          src={member.image}
+                          alt={role}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                          loading="lazy"
+                        />
+                      </picture>
                       <div className="absolute top-3 end-3">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-shop-gold/30 text-shop-gold text-xs font-bold shadow-md">
                           <Award className="w-3.5 h-3.5 text-shop-gold shrink-0" />
                           <span>{exp}</span>
                         </span>

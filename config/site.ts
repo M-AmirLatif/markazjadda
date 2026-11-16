@@ -818,8 +818,8 @@ export const siteConfig = {
       titleAr: "فني السمكرة وتعديل صدمات الهيكل بورشة مركز جدة (خبرة 5 سنوات)",
       titleEn: "Senior Body & Dent Repair Craftsman at Markaz Jadda (5 Years Experience)",
       category: "workshop",
-      src: "/assets/workers/worker-dent-standing.webp",
-      aspect: "0.75",
+      src: "/assets/workers/worker-dent-primary.webp",
+      aspect: "1.33",
       featured: true
     },
     {
@@ -829,7 +829,7 @@ export const siteConfig = {
       titleEn: "Automotive Paint, Oven Coating & Rogan Specialist (5 Years Experience)",
       category: "workshop",
       src: "/assets/workers/worker-paint-primary.webp",
-      aspect: "0.75",
+      aspect: "1.33",
       featured: true
     }
   ] as GalleryItem[]

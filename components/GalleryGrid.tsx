@@ -94,7 +94,7 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ items, locale, dict })
                   src={isVideo ? item.poster : item.src}
                   alt={title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* Overlay Badge */}

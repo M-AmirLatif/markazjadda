@@ -18,71 +18,73 @@ if (!fs.existsSync(backupDir)) {
   fs.mkdirSync(backupDir, { recursive: true });
 }
 
-// Backup originals untouched
+// Ensure originals are backed up untouched
 fs.readdirSync(inputDir).forEach(f => {
   fs.copyFileSync(path.join(inputDir, f), path.join(backupDir, f));
 });
 
-// Map key images
-const workers = [
+console.log('Generating perfectly centered 4:3 worker photos with 100% face visibility...');
+
+// Calibrated 4:3 crops:
+// Worker 1: 097004af (571x1280) -> { left: 35, top: 160, width: 500, height: 375 } (4:3)
+// Worker 1 Standing: 097004af -> { left: 5, top: 140, width: 560, height: 420 } (4:3)
+// Worker 2: d542e466 (900x1600) -> { left: 50, top: 200, width: 800, height: 600 } (4:3)
+// Worker 2 at car: 1f0c43f0 (720x1280) -> { left: 10, top: 200, width: 700, height: 525 } (4:3)
+
+const crops = [
   {
     key: 'worker-dent-primary',
-    file: 'ff0ade6f-a313-4e20-b97f-525d3acaea47.jpg',
-    role: 'dent',
+    src: '097004af-304b-4122-b9fa-9e089490a577.jpg',
+    extract: { left: 35, top: 160, width: 500, height: 375 },
   },
   {
     key: 'worker-dent-standing',
-    file: '097004af-304b-4122-b9fa-9e089490a577.jpg',
-    role: 'dent',
+    src: '097004af-304b-4122-b9fa-9e089490a577.jpg',
+    extract: { left: 5, top: 140, width: 560, height: 420 },
   },
   {
     key: 'worker-paint-primary',
-    file: 'd542e466-c69a-4328-a590-e50e5108934d.jpg',
-    role: 'paint',
+    src: 'd542e466-c69a-4328-a590-e50e5108934d.jpg',
+    extract: { left: 50, top: 200, width: 800, height: 600 },
   },
   {
     key: 'worker-paint-car',
-    file: '1f0c43f0-7b73-4bf4-aa41-df9211fd3604.jpg',
-    role: 'paint',
-  },
-  {
-    key: 'worker-paint-profile',
-    file: 'e5674a9e-010f-4bf8-861d-0cf70aba0f7e.jpg',
-    role: 'paint',
-  },
-  {
-    key: 'worker-dent-portrait',
-    file: '58ca836c-aca8-4842-b1b4-6af6a4acc8c5.jpg',
-    role: 'dent',
+    src: '1f0c43f0-7b73-4bf4-aa41-df9211fd3604.jpg',
+    extract: { left: 10, top: 200, width: 700, height: 525 },
   },
 ];
 
-console.log('Optimizing worker images with Sharp...');
+for (const c of crops) {
+  const fullPath = path.join(inputDir, c.src);
+  if (!fs.existsSync(fullPath)) {
+    console.error(`Source not found: ${fullPath}`);
+    continue;
+  }
 
-for (const w of workers) {
-  const fullPath = path.join(inputDir, w.file);
-  if (!fs.existsSync(fullPath)) continue;
+  const destBase = path.join(outDir, c.key);
 
-  const destBase = path.join(outDir, w.key);
-
-  // Full WebP
+  // 1. High-res WebP (800x600)
   await sharp(fullPath)
-    .webp({ quality: 85, effort: 4 })
+    .extract(c.extract)
+    .resize(800, 600, { fit: 'cover' })
+    .webp({ quality: 88, effort: 4 })
     .toFile(`${destBase}.webp`);
 
-  // 800px width
+  // 2. 800px WebP
   await sharp(fullPath)
-    .resize({ width: 800, withoutEnlargement: true })
-    .webp({ quality: 82 })
+    .extract(c.extract)
+    .resize(800, 600, { fit: 'cover' })
+    .webp({ quality: 85 })
     .toFile(`${destBase}-800.webp`);
 
-  // 400px thumb
+  // 3. 400px thumb WebP (400x300)
   await sharp(fullPath)
-    .resize({ width: 400, withoutEnlargement: true })
-    .webp({ quality: 80 })
+    .extract(c.extract)
+    .resize(400, 300, { fit: 'cover' })
+    .webp({ quality: 82 })
     .toFile(`${destBase}-400.webp`);
 
-  console.log(`✓ Processed ${w.key} from ${w.file}`);
+  console.log(`✓ Generated face-centered 4:3 crop for ${c.key}`);
 }
 
-console.log('Worker images successfully optimized!');
+console.log('Worker images successfully generated and optimized!');
